@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <AnalysisLevel>5.0</AnalysisLevel>
+        <AssemblyName>Accelerate.Sdk.Application</AssemblyName>
+        <AssemblyOriginatorKeyFile>$(SolutionDir)/Signature.snk</AssemblyOriginatorKeyFile>
+        <AssemblyTitle>Accelerate.Sdk.Application</AssemblyTitle>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Company>Accelerate</Company>
+        <Configuration>Release</Configuration>
+        <Configurations>Debug;Release</Configurations>
+        <Copyright>Accelerate © 2022</Copyright>
+        <Description>Contracts and base classes for application layer</Description>
+        <DocumentationFile>$(SolutionDir)/Accelerate.Sdk.Techdoc/Accelerate.Sdk.Application.xml</DocumentationFile>
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <FileVersion>1.0.0</FileVersion>
+        <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <InformationalVersion>1.0.0</InformationalVersion>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <Product>Accelerate SDK</Product>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/josemaria-toro/accelerate.sdk.application.git</RepositoryUrl>
+        <RootNamespace>Accelerate</RootNamespace>
+        <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+        <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+        <SignAssembly>true</SignAssembly>
+        <TargetFrameworks>
+            net462; net47; net471; net472; net48;
+            netcoreapp3.1; net6.0;
+            netstandard2.0; netstandard2.1;
+        </TargetFrameworks>
+        <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    </PropertyGroup>
+    <PropertyGroup>
+        <Authors>Accelerate Developers Team</Authors>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <IncludeBuildOutput>true</IncludeBuildOutput>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeSource>false</IncludeSource>
+        <IncludeSymbols>true</IncludeSymbols>
+        <IsPackable>true</IsPackable>
+        <IsTool>false</IsTool>
+        <PackageDescription>Contracts and base classes for application layer</PackageDescription>
+        <PackageIcon>PackageIcon.png</PackageIcon>
+        <PackageId>Accelerate.Sdk.Application</PackageId>
+        <PackageOutputPath>$(SolutionDir)\Accelerate.Packages</PackageOutputPath>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageVersion>1.0.0</PackageVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <DefineDebug>true</DefineDebug>
+        <DefineTrace>true</DefineTrace>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="$(SolutionDir)/PackageIcon.png" Pack="true" PackagePath="" />
+    </ItemGroup>
+</Project>

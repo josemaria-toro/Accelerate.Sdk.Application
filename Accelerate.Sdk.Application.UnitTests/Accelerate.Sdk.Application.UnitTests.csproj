@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <AnalysisLevel>5.0</AnalysisLevel>
+        <AssemblyName>Accelerate.Application.UnitTests</AssemblyName>
+        <AssemblyOriginatorKeyFile>$(SolutionDir)/Signature.snk</AssemblyOriginatorKeyFile>
+        <AssemblyTitle>Accelerate.Application.UnitTests</AssemblyTitle>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Company>Silvertic</Company>
+        <Configuration>Release</Configuration>
+        <Configurations>Debug;Release</Configurations>
+        <Copyright>Silvertic © 2022</Copyright>
+        <Description>Unit tests for application layer</Description>
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <FileVersion>1.0.0</FileVersion>
+        <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <InformationalVersion>1.0.0</InformationalVersion>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <Product>Accelerate</Product>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://dev.azure.com/silvertic/accelerate/_git/accelerate.application</RepositoryUrl>
+        <RootNamespace>Accelerate</RootNamespace>
+        <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+        <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+        <SignAssembly>true</SignAssembly>
+        <TargetFrameworks>net6.0</TargetFrameworks>
+        <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <DefineDebug>true</DefineDebug>
+        <DefineTrace>true</DefineTrace>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+        <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
+        <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
+        <PackageReference Include="coverlet.collector" Version="3.1.2">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Accelerate.Application\Accelerate.Application.csproj" />
+    </ItemGroup>
+</Project>
