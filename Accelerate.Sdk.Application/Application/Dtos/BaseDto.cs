@@ -8,7 +8,7 @@ namespace Accelerate.Application.Dtos
     /// Clase base para objetos de datos transferibles.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public abstract class Dto : IDto
+    public abstract class BaseDto : IDto
     {
         private Boolean _disposed;
 
@@ -22,7 +22,15 @@ namespace Accelerate.Application.Dtos
             foreach (var property in properties)
             {
                 var value = property.GetValue(this);
-                property.SetValue(instance, value);
+
+                try
+                {
+                    property.SetValue(instance, value);
+                }
+                catch
+                {
+                    continue;
+                }
             }
 
             return instance;
@@ -45,7 +53,7 @@ namespace Accelerate.Application.Dtos
         {
             if (_disposed)
             {
-                throw new ObjectDisposedException(nameof(Dto));
+                throw new ObjectDisposedException(nameof(BaseDto));
             }
 
             _disposed = true;

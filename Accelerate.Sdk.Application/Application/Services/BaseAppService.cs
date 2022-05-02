@@ -7,7 +7,7 @@ namespace Accelerate.Application.Services
     /// Clase base para servicios de la capa de aplicación.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public abstract class ApplicationService : IApplicationService
+    public abstract class BaseAppService : IAppService
     {
         private Boolean _disposed;
 
@@ -29,7 +29,7 @@ namespace Accelerate.Application.Services
         {
             if (_disposed)
             {
-                throw new ObjectDisposedException(nameof(ApplicationService));
+                throw new ObjectDisposedException(nameof(BaseAppService));
             }
 
             _disposed = true;
